@@ -1,4 +1,4 @@
- import express from 'express';
+import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
 import rateLimit from 'express-rate-limit';
@@ -18,7 +18,6 @@ app.use(express.urlencoded({ extended: URL_ENCODED }));
 app.use(hpp());
 app.use(helmet());
 app.use(cookieParser());
-
 
 // Rate Limiter
 const limiter = rateLimit({windowMs:REQUEST_LIMIT_TIME,max:REQUEST_LIMIT_NUMBER})
